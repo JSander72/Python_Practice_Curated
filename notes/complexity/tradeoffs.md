@@ -1,8 +1,6 @@
-# Complexity Tradeoffs
+# Common Trade-offs
 
-- Arrays: Fast access, slow insert/delete
-- Linked Lists: Slow access, fast insert/delete
-- Stacks/Queues: Fast push/pop, FIFO/LIFO
-- Hash Tables: Fast average lookup, possible collisions
-- Trees: Fast search if balanced, slow if unbalanced
-- Sorting: Tradeoff between speed, memory, and stability
+- **Array vs Linked List**: Arrays give O(1) index access; LL gives O(1) head insert/delete.
+- **BST vs Hash Table**: BST keeps order and supports range queries; HashMap is average O(1) but unordered.
+- **Recursion vs Iteration**: Recursion is expressive but risks stack overflow; iteration controls space.
+- **Time vs Space**: Use extra memory (hashing, DP tables) to cut time when needed.

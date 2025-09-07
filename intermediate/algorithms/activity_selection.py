@@ -1,11 +1,8 @@
-# Activity Selection (Greedy)
-
-def activity_selection(activities):
-    activities.sort(key=lambda x: x[1])
-    last_end = -1
-    count = 0
-    for start, end in activities:
-        if start >= last_end:
+def max_activities(intervals):
+    intervals.sort(key=lambda x: x[1])  # sort by finish time
+    count, last_end = 0, float('-inf')
+    for s,e in intervals:
+        if s >= last_end:
             count += 1
-            last_end = end
+            last_end = e
     return count

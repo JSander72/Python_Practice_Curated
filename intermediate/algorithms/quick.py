@@ -1,10 +1,7 @@
-# Quick Sort implementation
-
-def quick_sort(arr):
-    if len(arr) <= 1:
-        return arr
-    pivot = arr[len(arr) // 2]
-    left = [x for x in arr if x < pivot]
-    middle = [x for x in arr if x == pivot]
-    right = [x for x in arr if x > pivot]
-    return quick_sort(left) + middle + quick_sort(right)
+def quick_sort(a):
+    if len(a) <= 1: return a
+    pivot = a[len(a)//2]
+    less  = [x for x in a if x < pivot]
+    equal = [x for x in a if x == pivot]
+    greater = [x for x in a if x > pivot]
+    return quick_sort(less) + equal + quick_sort(greater)

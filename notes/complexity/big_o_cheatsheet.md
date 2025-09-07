@@ -1,17 +1,9 @@
-# Big O Cheatsheet
+# Big-O Cheatsheet (Quick Glance)
 
-- O(1): Constant time
-- O(log n): Logarithmic time
-- O(n): Linear time
-- O(n log n): Linearithmic time
-- O(n^2): Quadratic time
-- O(2^n): Exponential time
-- O(n!): Factorial time
-
-## Common Operations
-
-- Access by index (array): O(1)
-- Search (unsorted array): O(n)
-- Search (binary search): O(log n)
-- Insert/delete (array): O(n)
-- Insert/delete (linked list): O(1) (if node is known)
+- Hash lookup: average **O(1)**, worst **O(n)** with collisions
+- Binary search (sorted array): **O(log n)**
+- Merge/Quick sort: **O(n log n)** average
+- Bubble/Insertion/Selection: **O(n²)**
+- BST operations: **O(log n)** if balanced; **O(n)** if skewed
+- Queue/Stack ops: **O(1)**
+- Array insert/delete (middle): **O(n)**; at end amortized **O(1)** (dynamic arrays)
