@@ -1,10 +1,16 @@
+
+from __future__ import annotations
+from typing import Optional
+
 class Node:
     __slots__ = ("val", "next")
-    def __init__(self, val, nxt=None):
-        self.val, self.next = val, nxt
+    def __init__(self, val, nxt: Optional["Node"] = None):
+        self.val = val
+        self.next = nxt
 
 class LinkedList:
-    def __init__(self): self.head = None
+    def __init__(self) -> None:
+        self.head: Optional[Node] = None
 
     def insert_head(self, val):
         self.head = Node(val, self.head)

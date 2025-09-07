@@ -22,7 +22,8 @@ from intermediate.data_structures.singly_linked_list import LinkedList, has_cycl
 ll = LinkedList(); [ll.insert_tail(i) for i in [1,2,3]]
 ok("ll.search", ll.search(2) and not ll.search(5))
 ll.delete_first(2); ok("ll.delete_first", ll.search(2)==False)
-ll.reverse(); ok("ll.reverse", ll.head.val==3)
+ll.reverse()
+ok("ll.reverse", ll.head is not None and ll.head.val == 3)
 n1,n2,n3 = Node(1), Node(2), Node(3); n1.next=n2; n2.next=n3; n3.next=n1
 ok("ll.has_cycle", has_cycle(n1)==True)
 
