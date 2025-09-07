@@ -9,6 +9,7 @@
 - O(n!): Factorial time
 
 ## Common Operations
+
 - Access by index (array): O(1)
 - Search (unsorted array): O(n)
 - Search (binary search): O(log n)
