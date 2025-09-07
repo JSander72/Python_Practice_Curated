@@ -9,6 +9,15 @@ class Node:
         self.next = nxt
 
 class LinkedList:
+    def middle_node(self):
+        """Return the middle node (slow/fast pointer). If even, returns second middle."""
+        slow = fast = self.head
+        while fast and fast.next:
+            if slow:
+                slow = slow.next
+            fast = fast.next.next
+        return slow
+
     def __init__(self) -> None:
         self.head: Optional[Node] = None
 
@@ -55,3 +64,17 @@ def has_cycle(head):
         if slow is fast:
             return True
     return False
+
+# Demo/test for middle_node
+if __name__ == "__main__":
+    ll = LinkedList()
+    for i in range(1, 7):
+        ll.insert_tail(i)
+    cur = ll.head
+    vals = []
+    while cur:
+        vals.append(cur.val)
+        cur = cur.next
+    print("List:", vals)
+    mid = ll.middle_node()
+    print("Middle node value:", mid.val if mid else None)

@@ -23,4 +23,21 @@ def rotate_right(arr, k):
     if n == 0: return arr
     k %= n
     arr[:] = arr[-k:] + arr[:-k]
+
     return arr
+
+def rotate_left(arr, k):
+    """Rotate left by k. O(n)."""
+    n = len(arr)
+    if n == 0:
+        return arr
+    k %= n
+    arr[:] = arr[k:] + arr[:k]
+    return arr
+
+# Demo/test for rotate_left
+if __name__ == "__main__":
+    arr = [1, 2, 3, 4, 5]
+    print("Original:", arr)
+    rotate_left(arr, 2)
+    print("After rotate_left by 2:", arr)
